@@ -9,4 +9,24 @@ window.addEventListener("scroll", function(){
             section.classList.add("active");
         }
     });
+
+});
+
+window.addEventListener("scroll", function () {
+
+    const skillSection = document.querySelector("#skills");
+    const skillBars = document.querySelectorAll(".skill-bar-fill");
+
+    const sectionTop = skillSection.getBoundingClientRect().top;
+    const triggerPoint = window.innerHeight - 150;
+
+    if (sectionTop < triggerPoint) {
+
+        skillBars.forEach(bar => {
+            const width = bar.getAttribute("data-width");
+            bar.style.setProperty("--skill-width", width);
+            bar.classList.add("animated");
+        });
+
+    }
 });
