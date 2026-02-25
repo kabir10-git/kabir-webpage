@@ -27,6 +27,7 @@ window.addEventListener("scroll", function () {
             bar.style.setProperty("--skill-width", width);
             bar.classList.add("animated");
         });
-
+   
     }
 });
+
